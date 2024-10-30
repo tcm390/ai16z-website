@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function Header() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isHoverMenu, setIsHoverMenu] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const timeoutId = useRef<number | undefined>(undefined);
-  // Click-outside effect
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const dropdownElement = dropdownRef.current;
@@ -29,22 +29,6 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  // Hover effect handlers
-  const handleMouseEnter = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId.current);
-      timeoutId.current = undefined;
-    }
-    setIsDropdownVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    clearTimeout(timeoutId.current);
-    timeoutId.current = window.setTimeout(() => {
-      setIsDropdownVisible(false);
-    }, 100);
-  };
 
   const dropdownList = [
     { title: "Twitter", icon: "fab fa-twitter", link: "https://x.com/pmairca" },
@@ -101,27 +85,34 @@ export default function Header() {
 
         <div
           className="relative"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
           ref={dropdownRef}
+          onClick={() => setIsDropdownVisible(!isDropdownVisible)}
         >
           <button
             className="w-6 h-6 flex flex-col gap-[5.5px] justify-center"
             ref={buttonRef}
+            onMouseEnter={() => setIsHoverMenu(true)}
+            onMouseLeave={() => setIsHoverMenu(false)}
           >
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible ? "bg-[#ed8c00]" : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu
+                  ? "bg-[#ed8c00]"
+                  : "bg-[#4B5058]"
               }`}
             ></div>
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible ? "bg-[#ed8c00]" : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu
+                  ? "bg-[#ed8c00]"
+                  : "bg-[#4B5058]"
               }`}
             ></div>
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible ? "bg-[#ed8c00]" : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu
+                  ? "bg-[#ed8c00]"
+                  : "bg-[#4B5058]"
               }`}
             ></div>
           </button>

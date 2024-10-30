@@ -59,9 +59,9 @@ export default function Accordion({ accordionList }: AccordionProps) {
             <div
               className={`font-proxima font-[300] text-base text-[#4b5058] text-[0.8rem] md:text-[1.1rem] transition-all duration-500 ease-in-out ${
                 activeList.has(info.title)
-                  ? "max-h-[200px] pt-8"
+                  ? "max-h-[1000px] pt-1"
                   : "max-h-0 opacity-0"
-              } overflow-scroll`}
+              } overflow-hidden`}
             >
               {info.content}
             </div>
