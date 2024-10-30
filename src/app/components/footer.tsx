@@ -46,8 +46,8 @@ export default function Footers() {
     }
   }, [copyLink]);
   return (
-    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:h-48 h-64 bg-gray-500 z-[9998]">
-      <Link href="/" className="flex items-center">
+    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-gray-500 z-[9998]">
+      <Link href="/" className="flex items-start">
         <svg
           width="215"
           height="50"
@@ -76,7 +76,7 @@ export default function Footers() {
         </svg>
       </Link>
       <div className="flex flex-col gap-3 md:gap-6 justify-between my-6 md:my-0">
-        <div>
+        <div className="flex flex-col gap-3 md:gap-1">
           {addressList.map((item, index) => {
             return (
               <div key={index} className="text-[1rem] md:text-[1.1rem]">
