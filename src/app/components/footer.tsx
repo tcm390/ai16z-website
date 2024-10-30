@@ -46,7 +46,7 @@ export default function Footers() {
     }
   }, [copyLink]);
   return (
-    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-gray-500 z-[9998]">
+    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-gray-500 z-20">
       <Link href="/" className="flex flex-col items-start justify-between">
         <svg
           width="215"
@@ -88,7 +88,7 @@ export default function Footers() {
                   {item.address.slice(0, 4) + "..." + item.address.slice(-4)}
                 </div>
                 {copyLink === item.address ? (
-                  <i className="w-3 h-3 fa-solid fa-circle-check" />
+                  <i className="w-3 h-3 fa-solid fa-circle-check text-accent" />
                 ) : (
                   <i
                     className="w-3 h-3 fa-regular fa-copy hover:opacity-50 cursor-pointer"

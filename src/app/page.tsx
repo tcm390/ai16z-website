@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative z-[1] min-h-[calc(100vh-85px)] overflow-hidden bg-[#f6f7f7] px-16 py-[50px] text-[24px] md:text-[32px] sm:leading-[1.327] sm:tracking-[-0.005em] font-light leading-[1.4] text-[#3c3e43] tracking-[-0.03em]">
+    <div className="relative z-10 min-h-[calc(100vh-85px)] overflow-hidden bg-[#f6f7f7] px-16 py-[50px] text-[24px] md:text-[32px] sm:leading-[1.327] sm:tracking-[-0.005em] font-light leading-[1.4] text-[#3c3e43] tracking-[-0.03em]">
       <BackgroundImage imageUrl="images/home-topo-pattern.png" />
       <div className="w-full flex flex-col items-center justify-center">
         <Image
@@ -13,7 +13,7 @@ export default function Home() {
           alt="Picture of the author"
           className="w-[60%] h-auto rounded-xl mb-8"
         />
-        <div className="relative z-[1] max-w-[1340px] lg:max-w-[1206px] sm:px-[35px]">
+        <div className="relative max-w-[1340px] lg:max-w-[1206px] sm:px-[35px]">
           <h1
             className="font-bold text-[42px] md:text-[54px] leading-[1.2] tracking-[-0.03em] text-accent mb-[27px] opacity-0 translate-x-[-50px] sm:tracking-[-0.015em] sm:mb-[6px]"
             style={{

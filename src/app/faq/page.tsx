@@ -31,9 +31,9 @@ const faqList = [
 
 export default function Faq() {
   return (
-    <div className="flex items-center justify-center relative z-[1] min-h-[calc(100vh-85px)] overflow-hidden bg-[#f6f7f7] px-6 md:px-16 py-[50px]">
+    <div className="flex items-center justify-center relative z-10 min-h-[calc(100vh-85px)] overflow-hidden bg-[#f6f7f7] px-6 md:px-16 py-[50px]">
       <BackgroundImage imageUrl="images/home-topo-pattern.png" />
-      <div className=" relative z-[1] ">
+      <div className=" relative">
         <h1
           className="font-bold text-[42px] md:text-[54px] leading-[1.2] tracking-[-0.03em] text-accent mb-[27px] opacity-0 translate-x-[-50px] sm:tracking-[-0.015em] sm:mb-[6px]"
           style={{

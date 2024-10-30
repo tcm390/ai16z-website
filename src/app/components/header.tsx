@@ -51,7 +51,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex items-center py-2 sticky top-0 z-[9998] h-16 bg-white shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
+    <header className="flex items-center py-2 sticky top-0 z-30 h-16 bg-white shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
       <div className="flex w-full p-6 h-[64px] items-center justify-between">
         <Link href="/" className="flex items-center w-[130px] h-[64px]">
           <svg
