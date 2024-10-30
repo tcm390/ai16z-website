@@ -43,7 +43,7 @@ export default function Header() {
     clearTimeout(timeoutId.current);
     timeoutId.current = window.setTimeout(() => {
       setIsDropdownVisible(false);
-    }, 300);
+    }, 100);
   };
 
   const dropdownList = [
