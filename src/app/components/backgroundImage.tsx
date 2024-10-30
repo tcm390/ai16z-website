@@ -1,12 +1,8 @@
 interface BackgroundImageProps {
   imageUrl: string;
-  altText?: string;
 }
 
-const BackgroundImage: React.FC<BackgroundImageProps> = ({
-  imageUrl,
-  altText = "background image",
-}) => {
+const BackgroundImage: React.FC<BackgroundImageProps> = ({ imageUrl }) => {
   return (
     <div
       style={{
@@ -20,13 +16,13 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({
         pointerEvents: "none",
       }}
     >
-      <img
-        src={imageUrl}
-        alt={altText}
-        className="h-[300%] md:h-full w-[300%] md:w-full"
+      <div
+        className="h-[200%] md:h-full w-[200%] md:w-full"
         style={{
-          objectFit: "cover",
-          objectPosition: "center",
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
           animation: "zoom-in-out 30s ease-in-out infinite",
         }}
       />
