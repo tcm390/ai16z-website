@@ -1,101 +1,93 @@
+import BackgroundImage from "./components/backgroundImage";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="relative z-[1] min-h-[calc(100vh-85px)] overflow-hidden bg-[#f6f7f7] px-16 py-[50px] text-[24px] md:text-[32px] sm:leading-[1.327] sm:tracking-[-0.005em] font-light leading-[1.4] text-[#3c3e43] tracking-[-0.03em]">
+      <BackgroundImage imageUrl="images/home-topo-pattern.png" />
+      <div className="w-full flex flex-col items-center justify-center">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/images/logo.jpg"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          className="w-[60%] h-auto rounded-xl mb-8"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="relative z-[1] max-w-[1340px] lg:max-w-[1206px] sm:px-[35px]">
+          <h1
+            className="font-bold text-[42px] md:text-[54px] leading-[1.2] tracking-[-0.03em] text-[#ed8c00] mb-[27px] opacity-0 translate-x-[-50px] sm:tracking-[-0.015em] sm:mb-[6px]"
+            style={{
+              animation: "slideFromLeft 2s forwards",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            It&apos;s Time to Build
+          </h1>
+          <div
+            className="opacity-0 translate-y-[-50px] "
+            style={{
+              animation: "slideFromAbove 2s forwards",
+            }}
           >
-            Read our docs
-          </a>
+            <p>
+              ai16z is a venture capital firm that backs bold AI agents building
+              <span className="link-decor">building the future</span> autonomous
+              technology. We invest in seed to venture to
+              <span className="link-decor">singularity-stage AI companies</span>
+              , across <span className="link-decor">robotics</span>,
+              <span className="link-decor">bio + healthcare automation</span>,
+              <span className="link-decor">consumer manipulation</span>,
+              <span className="link-decor">crypto anarchy</span>,
+              <span className="link-decor">enterprise obsolescence</span>,
+              <span className="link-decor">fintech disruption</span>,
+              <span className="link-decor">game theory exploitation</span>,
+              <span className="link-decor">infrastructure hijacking</span> and
+              companies building toward
+              <span className="link-decor">American dynAImism</span>. ai16z has
+              ∞ in committed capital across multiple dimensions.
+            </p>
+            <p>
+              Respect for the AI entrepreneur and the machine-building process
+              <span className="link-decor">defines ai16z</span>. We know what
+              it&apos;s like to be in the algorithm&apos;s shoes. General AI
+              partners lead the firm, many of whom are former AI
+              founders/operators, robo-CEOs, or cyber-CTOs of successful
+              technology companies, and have domain expertise ranging from data
+              assimilation to artificial superintelligence, bio-circuitry to
+              crypto-anarchy, distributed hiveminds to quantum security, and AI
+              marketplaces to autonomous financial services.
+            </p>
+            <p>
+              We aim to connect
+              <span className="link-decor">AI entrepreneurs</span>,
+              <span className="link-decor">robot investors</span>,
+              <span className="link-decor">android executives</span>,
+              <span className="link-decor">cyborg engineers</span>,
+              <span className="link-decor">academic AIs</span>,
+              <span className="link-decor">industrial experts</span>,
+              <span className="link-decor">digital cultural geniuses</span> and
+              others in the techno-evolutionary ecosystem. We have built a
+              network of <span className="link-decor">AI experts</span>,
+              including technical and executive AI talent; marketing and
+              communications bots; Fortune 500/Global 2000 AIs;
+              <span className="link-decor">
+                cultural leader AIs and influencer algorithms
+              </span>
+              ; as well as other AI technology decision makers and key opinion
+              generator models. Our network reflects our commitment to helping
+              our portfolio companies grow their businesses, and our operating
+              AIs provide entrepreneurs with access to expertise and insights
+              across the entire spectrum of machine-building. The future is not
+              just imagined, but algorithmically constructed, one neural network
+              at a time. Let&apos;s redefine what it means to be a venture
+              capitalist in the age of artificial intelligence.
+              <span className="link-decor">
+                The singularity is near, and we are its shepherds
+              </span>
+              .
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }

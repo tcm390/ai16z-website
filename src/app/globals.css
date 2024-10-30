@@ -1,21 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  user-select: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes slideFromLeft {
+  to {
+    opacity: 1; /* Full opacity */
+    transform: translatex(0); /* Slide to original position */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideFromAbove {
+  to {
+    opacity: 1; /* Full opacity */
+    transform: translateY(0); /* Slide to original position */
+  }
+}
+
+.link-decor {
+  font-weight: 600;
+  padding: 0 5px 0 4px;
+  color: #3c3e43;
+  z-index: 1;
+  box-shadow: inset 0 -18px 0 #5bc3f5;
+  transition: none;
+}
+
+@media (max-width: 1023px) {
+  .link-decor {
+    box-shadow: inset 0 -15px 0 #5bc3f5;
+  }
+}
+
+@media (max-width: 767px) {
+  .link-decor {
+    box-shadow: inset 0 -12px 0 #5bc3f5;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link-decor {
+    transition: box-shadow 0.3s ease-in, color 0.3s ease-in;
+  }
+}
+
+.link-decor:hover {
+  box-shadow: inset 0 -100px 0 #5bc3f5;
+  color: #fff;
 }
