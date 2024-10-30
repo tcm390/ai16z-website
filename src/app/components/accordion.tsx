@@ -46,7 +46,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
               <span
                 aria-hidden={true}
                 className={`
-                    border-r-2 border-b-2 border-[currentcolor] inline-block h-[8px] w-[8px] transition-all duration-500 ease-in-out
+                    border-r-2 border-b-2 border-[currentcolor] inline-block h-[8px] w-[8px] transition-all duration-300 ease-in-out
                     ${
                       activeList.has(info.title)
                         ? "transform -rotate-[135deg] translate-y-[2px]"
@@ -57,7 +57,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
             </div>
 
             <div
-              className={`font-proxima font-[300] text-base text-[#4b5058] text-[0.8rem] md:text-[1.1rem] transition-all duration-500 ease-in-out ${
+              className={`font-proxima font-[300] text-base text-[#4b5058] text-[0.8rem] md:text-[1.1rem] transition-all duration-300 ease-in-out ${
                 activeList.has(info.title)
                   ? "max-h-[1000px] pt-1"
                   : "max-h-0 opacity-0"
