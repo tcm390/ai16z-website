@@ -96,23 +96,17 @@ export default function Header() {
           >
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu
-                  ? "bg-[#ed8c00]"
-                  : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
               }`}
             ></div>
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu
-                  ? "bg-[#ed8c00]"
-                  : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
               }`}
             ></div>
             <div
               className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu
-                  ? "bg-[#ed8c00]"
-                  : "bg-[#4B5058]"
+                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
               }`}
             ></div>
           </button>

@@ -37,7 +37,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
           >
             <div
               className={`flex gap-6 justify-between items-center ${
-                activeList.has(info.title) ? "text-[#ed8c00]" : ""
+                activeList.has(info.title) ? "text-accent" : ""
               }`}
             >
               <div className="font-medium text-[1rem] md:text-[1.3rem]">
