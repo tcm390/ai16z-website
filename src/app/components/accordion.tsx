@@ -37,7 +37,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
           >
             <div
               className={`flex gap-6 justify-between items-center ${
-                activeList.has(info.title) ? "text-accent" : ""
+                activeList.has(info.title) ? "text-amber" : ""
               }`}
             >
               <div className="font-medium text-[1rem] md:text-[1.3rem]">
@@ -57,7 +57,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
             </div>
 
             <div
-              className={`font-proxima font-[300] text-[#4b5058] text-[0.8rem] md:text-[1.1rem] transition-all duration-300 ease-in-out ${
+              className={`font-proxima font-[300] text-charcoal text-[0.8rem] md:text-[1.1rem] transition-all duration-300 ease-in-out ${
                 activeList.has(info.title)
                   ? "max-h-[1000px] pt-1"
                   : "max-h-0 opacity-0"

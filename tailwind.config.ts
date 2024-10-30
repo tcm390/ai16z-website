@@ -11,7 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        accent: "#ED8C00",
+        amber: "#ED8C00",
+        charcoal: "#4B5058",
+        steel: "#5F636A",
+        sky: "#5bc3f5",
       },
       fontFamily: {
         proxima: [

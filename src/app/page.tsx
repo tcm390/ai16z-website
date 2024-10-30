@@ -15,7 +15,7 @@ export default function Home() {
         />
         <div className="relative max-w-[1340px] lg:max-w-[1206px] sm:px-[35px]">
           <h1
-            className="font-bold text-[42px] md:text-[54px] leading-[1.2] tracking-[-0.03em] text-accent mb-[27px] opacity-0 translate-x-[-50px] sm:tracking-[-0.015em] sm:mb-[6px]"
+            className="font-bold text-[42px] md:text-[54px] leading-[1.2] tracking-[-0.03em] text-amber mb-[27px] opacity-0 translate-x-[-50px] sm:tracking-[-0.015em] sm:mb-[6px]"
             style={{
               animation: "slideFromLeft 2s forwards",
             }}

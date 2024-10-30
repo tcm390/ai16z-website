@@ -95,18 +95,18 @@ export default function Header() {
             onMouseLeave={() => setIsHoverMenu(false)}
           >
             <div
-              className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
+              className={` h-[2.5px] w-6 rounded-lg bg-charcoal ${
+                isDropdownVisible || isHoverMenu ? "opacity-50" : ""
               }`}
             ></div>
             <div
-              className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
+              className={` h-[2.5px] w-6 rounded-lg bg-charcoal ${
+                isDropdownVisible || isHoverMenu ? "opacity-50" : ""
               }`}
             ></div>
             <div
-              className={` h-[2.5px] w-6 rounded-lg ${
-                isDropdownVisible || isHoverMenu ? "bg-accent" : "bg-[#4B5058]"
+              className={` h-[2.5px] w-6 rounded-lg bg-charcoal ${
+                isDropdownVisible || isHoverMenu ? "opacity-50" : ""
               }`}
             ></div>
           </button>

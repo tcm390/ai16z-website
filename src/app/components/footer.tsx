@@ -46,38 +46,41 @@ export default function Footers() {
     }
   }, [copyLink]);
   return (
-    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-gray-500 z-20">
-      <Link href="/" className="flex flex-col items-start justify-between">
-        <svg
-          width="215"
-          height="50"
-          viewBox="0 11.012 54.882 16.987"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <style>
-              @import
-              url(https://fonts.googleapis.com/css2?family=Mitr%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&amp;display=swap);
-            </style>
-          </defs>
-          <text
-            style={{
-              fontFamily: "Mitr",
-              fontSize: "21px",
-              fontWeight: "500",
-              whiteSpace: "pre",
-            }}
-            x="-9"
-            y="26.578"
-            fill="white"
+    <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-charcoal z-20">
+      <div className="flex flex-col items-start justify-between">
+        <Link href="/">
+          <svg
+            width="215"
+            height="50"
+            viewBox="0 11.012 54.882 16.987"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            ai16z
-          </text>
-        </svg>
-        <div className="font-proxima font-[500] hidden md:block">
+            <defs>
+              <style>
+                @import
+                url(https://fonts.googleapis.com/css2?family=Mitr%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&amp;display=swap);
+              </style>
+            </defs>
+            <text
+              style={{
+                fontFamily: "Mitr",
+                fontSize: "21px",
+                fontWeight: "500",
+                whiteSpace: "pre",
+              }}
+              x="-9"
+              y="26.578"
+              fill="white"
+            >
+              ai16z
+            </text>
+          </svg>
+        </Link>
+        <div className="font-proxima font-[350] hidden md:block">
           <span className="font-[300]">©</span> 2024 AI16Z
         </div>
-      </Link>
+      </div>
+
       <div className="flex font-proxima text-base flex-col gap-3 md:gap-6 justify-between my-6 md:my-0">
         <div className="flex flex-col gap-3 md:gap-1">
           {addressList.map((item, index) => {
@@ -88,7 +91,7 @@ export default function Footers() {
                   {item.address.slice(0, 4) + "..." + item.address.slice(-4)}
                 </div>
                 {copyLink === item.address ? (
-                  <i className="w-3 h-3 fa-solid fa-circle-check text-accent" />
+                  <i className="w-3 h-3 fa-solid fa-circle-check text-sky" />
                 ) : (
                   <i
                     className="w-3 h-3 fa-regular fa-copy hover:opacity-50 cursor-pointer"
@@ -111,7 +114,7 @@ export default function Footers() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-2 w-10 h-10 bg-[#5f636a]"
+                  className="flex items-center justify-center p-2 w-10 h-10 bg-steel hover:bg-sky transition-all duration-500"
                 >
                   <div className={`${social.icon}`}></div>
                 </Link>

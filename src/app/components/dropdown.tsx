@@ -20,12 +20,10 @@ const DropDown: React.FC<DropDownProps> = ({ items, className }) => {
         <Link
           href={item.link}
           key={index}
-          className=" flex items-center gap-3 p-3 hover:bg-gray-100"
+          className=" flex items-center gap-3 p-3 hover:bg-gray-100 text-charcoal hover:text-sky transition-all duration-300"
         >
           {item.icon && <div className={`${item.icon}`} />}
-          <div className="text-gray-800 font-medium hover:text-gray-600 focus:outline-none">
-            {item.title}
-          </div>
+          <div className="font-medium focus:outline-none">{item.title}</div>
         </Link>
       ))}
     </div>
