@@ -14,7 +14,7 @@ const config: Config = {
         amber: "#ED8C00",
         charcoal: "#4B5058",
         steel: "#5F636A",
-        sky: "#5bc3f5",
+        sky: "#5BC3F5",
       },
       fontFamily: {
         proxima: [

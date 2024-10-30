@@ -31,13 +31,13 @@ export default function Accordion({ accordionList }: AccordionProps) {
           <div
             key={index}
             className={
-              "bg-white w-full rounded-xl px-5 md:px-10 py-6 shadow-lg flex flex-col transition-all"
+              "bg-white w-full rounded-xl px-5 md:px-10 py-6 shadow-lg flex flex-col hover:text-sky transition-all duration-300 ease-in-out"
             }
             onClick={() => handleClick(info.title)}
           >
             <div
               className={`flex gap-6 justify-between items-center ${
-                activeList.has(info.title) ? "text-amber" : ""
+                activeList.has(info.title) ? "text-sky" : ""
               }`}
             >
               <div className="font-medium text-[1rem] md:text-[1.3rem]">
@@ -57,7 +57,7 @@ export default function Accordion({ accordionList }: AccordionProps) {
             </div>
 
             <div
-              className={`font-proxima font-[300] text-charcoal text-[0.8rem] md:text-[1.1rem] transition-all duration-300 ease-in-out ${
+              className={`font-proxima font-[300] text-charcoal text-[0.8rem] md:text-[1.1rem] ${
                 activeList.has(info.title)
                   ? "max-h-[1000px] pt-1"
                   : "max-h-0 opacity-0"
