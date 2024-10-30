@@ -82,19 +82,25 @@ export default function Footers() {
       </div>
 
       <div className="flex font-proxima text-base flex-col gap-3 md:gap-6 justify-between my-6 md:my-0">
-        <div className="flex flex-col gap-3 md:gap-1">
+        <div className="flex flex-col gap-3 md:gap-1 w-[14rem]">
           {addressList.map((item, index) => {
             return (
               <div key={index} className="text-[1rem] md:text-[1.1rem]">
-                <span className="mr-2 ">{item.title + ":"}</span>
-                <div className="font-semibold inline mr-2">
-                  {item.address.slice(0, 4) + "..." + item.address.slice(-4)}
+                <span className={`mr-2 uppercase`}>{item.title + ":"}</span>
+                <div
+                  className={`font-semibold inline mr-2 ${
+                    copyLink === item.address ? "text-sky" : ""
+                  }`}
+                >
+                  {copyLink === item.address
+                    ? "Copied"
+                    : item.address.slice(0, 4) + "..." + item.address.slice(-4)}
                 </div>
                 {copyLink === item.address ? (
                   <i className="w-3 h-3 fa-solid fa-circle-check text-sky" />
                 ) : (
                   <i
-                    className="w-3 h-3 fa-regular fa-copy hover:opacity-50 cursor-pointer"
+                    className="w-3 h-3 fa-regular fa-copy hover:opacity-50 cursor-pointer text-gray-400"
                     onClick={() => {
                       setCopyLink(item.address);
                     }}
@@ -103,9 +109,8 @@ export default function Footers() {
               </div>
             );
           })}
-
-          <div className="border-b border-white border-1 my-3 md:border-0 md:my-0" />
         </div>
+        <div className="border-b border-white border-1 my-3 md:hidden md:border-0 md:my-0" />
         <ul className="flex gap-2 w-full h-full">
           {socialList.map((social, index) => {
             return (
