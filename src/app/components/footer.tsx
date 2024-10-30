@@ -47,7 +47,7 @@ export default function Footers() {
   }, [copyLink]);
   return (
     <div className="flex flex-col md:flex-row sticky justify-between text-white w-full py-10 px-6 md:px-32 md:min-h-48 h-min-64 bg-gray-500 z-[9998]">
-      <Link href="/" className="flex items-start">
+      <Link href="/" className="flex flex-col items-start justify-between">
         <svg
           width="215"
           height="50"
@@ -74,13 +74,16 @@ export default function Footers() {
             ai16z
           </text>
         </svg>
+        <div className="font-proxima font-[500] hidden md:block">
+          <span className="font-[300]">©</span> 2024 AI16Z
+        </div>
       </Link>
-      <div className="flex flex-col gap-3 md:gap-6 justify-between my-6 md:my-0">
+      <div className="flex font-proxima text-base flex-col gap-3 md:gap-6 justify-between my-6 md:my-0">
         <div className="flex flex-col gap-3 md:gap-1">
           {addressList.map((item, index) => {
             return (
               <div key={index} className="text-[1rem] md:text-[1.1rem]">
-                <span className="mr-2">{item.title + ":"}</span>
+                <span className="mr-2 ">{item.title + ":"}</span>
                 <div className="font-semibold inline mr-2">
                   {item.address.slice(0, 4) + "..." + item.address.slice(-4)}
                 </div>
@@ -116,6 +119,9 @@ export default function Footers() {
             );
           })}
         </ul>
+      </div>
+      <div className="font-proxima font-[500] md:hidden">
+        <span className="font-[300]">©</span> 2024 AI16Z
       </div>
     </div>
   );

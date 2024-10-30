@@ -15,21 +15,12 @@ const config: Config = {
       },
       fontFamily: {
         proxima: [
-          '"proxima-nova"',
-          '"Helvetica Neue"',
+          "proxima-nova",
+          "Helvetica Neue",
           "Arial",
           "Helvetica",
           "sans-serif",
         ],
-      },
-      fontWeight: {
-        "300": "300",
-      },
-      lineHeight: {
-        tight: "1.6",
-      },
-      fontSize: {
-        base: ["18px", "1.6"],
       },
     },
   },
