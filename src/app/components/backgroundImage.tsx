@@ -23,11 +23,11 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({
       <img
         src={imageUrl}
         alt={altText}
+        className="h-[300%] md:h-full w-[300%] md:w-full"
         style={{
-          width: "100%",
-          height: "100%",
           objectFit: "cover",
           objectPosition: "center",
+          animation: "zoom-in-out 30s ease-in-out infinite",
         }}
       />
     </div>
